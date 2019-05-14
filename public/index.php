@@ -1,3 +1,10 @@
 <?php
+ini_set('max_execution_time', 0);
 require_once dirname(__DIR__).'/vendor/autoload.php';
-echo "<h1> Hola </h1>";
+
+    use App\kernel;
+    use Kint;
+
+    $kernel = new kernel();
+    Kint::dump($GLOBALS);
+    $kernel -> init();
